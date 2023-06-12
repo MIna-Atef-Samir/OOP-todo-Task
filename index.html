@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <title>ToDo List</title>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="todo w-75 mx-auto text-info-emphasis bg-primary-subtle border border-info-subtle rounded-3 p-5 ">
+      <h1 class="text-center mb-4">TODO List</h1>
+      <div class="addfield d-flex">
+        <input type="text" class="form-control" name="" id="input" placeholder="Add your todo">
+        <select class="form-select ms-3" aria-label="Default select example" id="priority">
+          <option disabled selected value="">Open the priority</option>
+          <option value='1'>Low - 1</option>
+          <option value='2'>Medium - 2</option>
+          <option value='3'>High - 3</option>
+        </select>
+        <div id="addButton" onclick="addTask(document.getElementById('input').value, document.getElementById('priority').value)" class="btn btn-success ms-3">Add</div>
+      </div>
+      <div class="show my-5">
+        <table class="table">
+          <thead class="table-dark">
+            <th>#</th>
+            <th class="hov" onclick="changeName()">ToDo</th>
+            <th class="hov" onclick="changeRate()">Priority</th>
+            <th>Actions</th>
+          </thead>
+          <tbody id="list">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

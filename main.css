@@ -1,0 +1,9 @@
+
+.hov{
+    transition: .3s;
+}
+.hov:hover{
+    cursor: pointer;
+    text-decoration:underline;
+    color: green;
+}
